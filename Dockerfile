@@ -2,7 +2,8 @@ FROM centos:latest
 
 MAINTAINER @mraad <mraad@esri.com>
 
-RUN yum -y --nogpg install xorg-x11-server-Xvfb.x86_64 fontconfig freetype gettext less htop vim
+RUN yum -y --nogpg install xorg-x11-server-Xvfb.x86_64 fontconfig freetype gettext less htop vim \
+             mesa-libGLU libXtst libXi libXrender
 
 RUN mkdir /arcgis
 ADD Server_Ent_Adv.prvc /arcgis/
